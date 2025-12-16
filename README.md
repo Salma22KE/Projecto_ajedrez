@@ -22,16 +22,20 @@ ajedrez-proyecto/
 
 1. Clona el repositorio:
 
-```bash
+```
 git clone <https://github.com/Salma22KE/Projecto_ajedrez.git>
 cd ajedrez-proyecto
 ```
 #Instalar las dependencias:
+```
 npm install
+```
 
 Ejecuta el servidor:
+```
 cd server
 node index.js
+```
 
 
 
