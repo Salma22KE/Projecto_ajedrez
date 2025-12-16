@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajedrez Online - Juego Multijugador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Columna izquierda: Piezas Capturadas -->
+        <div class="left-side">
+            <div class="captured-panel">
+                <h2>Piezas Capturadas</h2>
+                
+                <div class="captured-section">
+                    <h3>Blancas (<span id="white-score">0</span>)</h3>
+                    <div id="white-captured" class="pieces-list"></div>
+                </div>
+                
+                <div class="captured-section">
+                    <h3>Negras (<span id="black-score">0</span>)</h3>
+                    <div id="black-captured" class="pieces-list"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Columna central: Tablero -->
+        <div class="center-column">
+            <div class="info-panel">
+                <h1>Ajedrez Online</h1>
+                <div class="player-info">
+                    <p>Tu color: <span id="player-color">Esperando...</span></p>
+                    <p>Turno: <span id="current-turn">Blancas</span></p>
+                </div>
+                <button id="reset-btn" class="btn">Nueva Partida</button>
+            </div>
+            
+            <!-- Tablero de ajedrez -->
+            <div id="board" class="board"></div>
+        </div>
+        
+        <!-- Columna derecha: Chat -->
+        <div class="right-side">
+            <div class="chat-area">
+                <h2>Chat</h2>
+                <div id="chat-messages" class="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input" placeholder="Escribe un mensaje..." maxlength="200">
+                    <button id="send-btn" class="btn">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
